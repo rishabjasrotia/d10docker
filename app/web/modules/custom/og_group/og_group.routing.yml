@@ -1,0 +1,7 @@
+og_group.add_group:
+  path: '/og/add'
+  defaults:
+    _title: 'Create Group'
+    _form: 'Drupal\og_group\Form\GroupAddForm'
+  requirments:
+    _permission: 'View published content'
