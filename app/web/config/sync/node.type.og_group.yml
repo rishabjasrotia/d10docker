@@ -1,0 +1,18 @@
+uuid: 64682f64-c584-4458-b046-d566c415263a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'OG Group'
+type: og_group
+description: 'Case Group'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

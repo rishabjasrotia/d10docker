@@ -1,0 +1,19 @@
+uuid: ce3f215a-6732-47c5-a62e-1db07260d35b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_group_name
+    - node.type.og_group
+id: node.og_group.field_group_name
+field_name: field_group_name
+entity_type: node
+bundle: og_group
+label: 'Group Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
