@@ -7,7 +7,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Entity\EntityFieldManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class GroupAddForm extends FormBase {
+class GroupSettingForm extends FormBase {
 
   protected $entity_type_manager;
   protected $entityFieldManager;
@@ -37,9 +37,16 @@ class GroupAddForm extends FormBase {
 
     $fields = $this->entityFieldManager->getFieldDefinitions('node', 'og_group');
 
+    $query = \Drupal::entityQuery('taxonomy_term');
+    $query->condition('vid', "payment_type");
+    $tids = $query->execute();
+    // print_r($tids);
+
+    $payment_type = $this->entity_type_manager->getStorage('taxonomy_term')->loadMultiple($tids);
+    // print_r($payment_type);
     $form['submit'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Add'),
+      '#value' => $this->t('Save'),
       '#button_type' => 'primary',
     ];
     return $form;
