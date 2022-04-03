@@ -3,8 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.og_group.body
-    - field.field.node.og_group.field_group_name
+    - field.field.node.og_group.field_og_description
     - node.type.og_group
   module:
     - path
@@ -14,25 +13,15 @@ targetEntityType: node
 bundle: og_group
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_group_name:
-    type: string_textfield
-    weight: 122
+  field_og_description:
+    type: text_textfield
+    weight: 123
     region: content
     settings:
       size: 60

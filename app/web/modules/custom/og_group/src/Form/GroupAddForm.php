@@ -37,22 +37,6 @@ class GroupAddForm extends FormBase {
 
     $fields = $this->entityFieldManager->getFieldDefinitions('node', 'og_group');
 
-    // print_r($fields);
-
-    $listFields = [];
-    foreach ($fields as $field_name => $field_definition) {
-      if (!empty($field_definition->getTargetBundle())) {
-        $listFields[$field_name]['type'] = $field_definition->getType();
-        $listFields[$field_name]['label'] = $field_definition->getLabel();
-      }
-    }
-    foreach ($listFields as $field_name => $info) {
-      $form[$field_name] = [
-        '#type' => $info['type'],
-        '#title' => $info['label'],
-      ];
-    }
-
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Add'),
