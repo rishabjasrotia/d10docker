@@ -1,0 +1,7 @@
+og_group.add_group:
+  path: '/og/add'
+  defaults:
+    _title: 'Group Setting'
+    _form: '\Drupal\og_group\Form\GroupSettingForm'
+  requirements:
+    _permission: 'access content'

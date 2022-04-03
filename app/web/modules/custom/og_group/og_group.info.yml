@@ -1,0 +1,4 @@
+name: Group Manager
+description: Handling the OG Groups
+type: module
+core_version_requirement: ^8 || ^9

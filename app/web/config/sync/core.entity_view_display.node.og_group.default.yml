@@ -3,8 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.og_group.body
-    - field.field.node.og_group.field_group_name
+    - field.field.node.og_group.field_og_description
     - node.type.og_group
   module:
     - text
@@ -14,20 +13,12 @@ targetEntityType: node
 bundle: og_group
 mode: default
 content:
-  body:
+  field_og_description:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
-    region: content
-  field_group_name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 102
+    weight: 103
     region: content
   links:
     settings: {  }
